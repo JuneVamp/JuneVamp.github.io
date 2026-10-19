@@ -1,0 +1,110 @@
+
+:root{
+    --vampire-dark-blue : #1A1A2E;
+    --vampire-red : #9B223B;
+    --vampire-maroon : #4B0F12;
+    --vampire-muave : #6F2C34;
+    --vampire-yellow : #F0E3C7;
+    --vampire-purple : #6C5B7F;
+    --vampire-grey : #B1A7A1;
+
+    --berries-lavender : #e3d6ea;
+    --berries-amethyst : #8c80b5;
+    --berries-midnight : #0b0f2b;
+    --berries-dark-pruple : #332f3d;
+    --berries-wine : rgb(92, 31, 49);
+
+    
+
+    --main-color : var(--vampire-maroon);
+    --main-dark : var(--vampire-maroon);
+    --main-black : var(--vampire-dark-blue);
+    --main-white : var(--vampire-yellow);
+    --main-text : var(--main-white);
+    --main-link : var(--berries-amethyst);
+    --box-fill-dark : var(--berries-dark-pruple)
+
+    
+}
+
+@font-face {
+    font-family: lora;
+    src: url(./assets/fonts/Lora-Regular.ttf);
+}
+
+@font-face {
+    font-family: witchy;
+    src: url(./assets/fonts/SunandMoon.ttf);
+}
+
+body{
+    background-color: var(--main-color); 
+    background-image: url(assets/textures/black-felt.png); 
+    margin: 0 0 0 0;
+    font-size : large
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    margin : 30px auto;
+    max-width: 600px;
+    text-align: center;
+    color: var(--main-text);
+}
+
+
+.noise {
+    /* background-image: url(./assets/textures/black-felt.png); */
+    width: 100vw;
+    height: 100vh;
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  backdrop-filter: contrast(155%) brightness(900%) invert(100%);
+  mix-blend-mode: darken;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+#headerArea {
+   /* border : var(--main-black) 3px solid; */
+   margin-bottom: 50px;
+   font-family: lora, serif;
+   /* background-color: var(--box-fill-dark); */
+   /* background-image: url(assets/textures/black-felt.png); */
+}
+
+#profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+    /* border: solid 2px; */
+    padding-left: 2%;
+    /* background-color: var(--main-color); */
+    /* background : gr; */
+}
+
+img.headshot{
+    padding: 20px;
+    height: 250px;
+}
+
+/* .content h2{
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: var(--main-white) 1px solid;
+}
+
+.content ul{
+    text-align: left;
+} */
+
+a{
+    color : var(--main-link)
+}
